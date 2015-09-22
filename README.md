@@ -14,7 +14,7 @@ This is a simple guide to running perl on Google App Engine.
 
 3. Create a `Dockerfile` in the root of your application with the following contents:
 
-    ```yaml
+    ```dockerfile
     FROM perl:latest
     RUN curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n Mojolicious
     ENV MOJO_LISTEN http://*:8080
@@ -31,4 +31,4 @@ This is a simple guide to running perl on Google App Engine.
     gcloud preview app deploy app.yaml --set-default --project [project id]"
     ```
 
-You are now running perl on App Engine. How cool is that?
+You are now running perl on App Engine. How cool is that?  Check it out at [https://perl-demo.appspot.com/](https://perl-demo.appspot.com/).
