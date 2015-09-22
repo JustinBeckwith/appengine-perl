@@ -24,11 +24,20 @@ This is a simple guide to running perl on Google App Engine.
     RUN chmod +x main.pl
     CMD ["./main.pl", "daemon"]
     ```
+4. Create a project in the [Google Developers Console](https://console.developers.google.com/).
 
-3. Deploy your app:
+5. Make sure you have the [Google Cloud SDK](https://cloud.google.com/sdk/) installed. 
 
     ```sh
-    gcloud preview app deploy app.yaml --set-default --project [project id]"
+    $ curl https://sdk.cloud.google.com | bash 
+    $ gcloud auth login
+    $ gcloud components update app
+    ```
+
+6. Deploy your app:
+
+    ```sh
+    gcloud preview app deploy app.yaml --set-default --project [your-project-id]
     ```
 
 You are now running perl on App Engine. How cool is that?  Check it out at [https://perl-demo.appspot.com/](https://perl-demo.appspot.com/).
