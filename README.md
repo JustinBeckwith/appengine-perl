@@ -30,7 +30,7 @@ This is a simple guide to running perl on Google App Engine.
 
     ```sh
     $ curl https://sdk.cloud.google.com | bash 
-    $ gcloud auth login
+    $ gcloud init
     $ gcloud components update app
     ```
 
